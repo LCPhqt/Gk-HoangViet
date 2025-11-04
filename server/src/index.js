@@ -14,8 +14,8 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://mongo:27017/hr_system';
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(MONGO_URI)
-    .then(() => console.log('✅ MongoDB connected'))
-    .catch(err => console.error('❌ MongoDB error:', err));
+    .then(() => console.log(' MongoDB connected'))
+    .catch(err => console.error(' MongoDB error:', err));
 
 // Routes
 const authRoutes = require('./routes/auth');
@@ -33,8 +33,8 @@ app.get('/api/health', (req, res) => {
 // Start server
 app.listen(PORT, '0.0.0.0', () => {
     console.log('==========================================');
-    console.log(`🚀 Server chạy tại port ${PORT}`);
-    console.log(`📡 Health: http://localhost:${PORT}/api/health`);
-    console.log(`🔐 Auth API: http://localhost:${PORT}/api/auth`);
+    console.log(` Server chạy tại port ${PORT}`);
+    console.log(` Health: http://localhost:${PORT}/api/health`);
+    console.log(` Auth API: http://localhost:${PORT}/api/auth`);
     console.log('==========================================');
 });
