@@ -16,7 +16,7 @@ module.exports = function (req, res, next) {
     try {
         // Xác thực token
         const decoded = jwt.verify(token, JWT_SECRET);
-        console.log('✅ Token hợp lệ, User ID:', decoded.userId);
+        console.log('Token hợp lệ, User ID:', decoded.userId);
 
         req.userId = decoded.userId;
         next();
